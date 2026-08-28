@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="116" viewBox="0 0 500 116" role="img" aria-label="Clearer Days monochrome logo">
+<g transform="translate(14 14) scale(.72)"><g aria-label="Clearer Days open horizon symbol">
+  <path d="M74 22 A52 52 0 1 0 74 126" fill="none" stroke="#17212B" stroke-width="20" stroke-linecap="round"/>
+  <path d="M77 74 H132" fill="none" stroke="#17212B" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="119" cy="62" r="13" fill="#17212B"/>
+</g></g><text x="138" y="72" fill="#17212B" font-family="Manrope, Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="-1.5">Clearer Days</text>
+</svg>

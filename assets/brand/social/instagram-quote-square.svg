@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" role="img" aria-label="Clearer Days A clearer thought template">
+<rect width="1080" height="1080" fill="#FBFAF5"/>
+      <circle cx="950" cy="194" r="238" fill="#E9EFFC"/>
+      <path d="M0 907 Q 410 756 1080 886 V 1080 H0Z" fill="#E9EFFC"/>
+      <g transform="translate(81 81) scale(0.5142857142857142)"><g aria-label="Clearer Days open horizon symbol">
+  <path d="M74 22 A52 52 0 1 0 74 126" fill="none" stroke="#2F5BD3" stroke-width="20" stroke-linecap="round"/>
+  <path d="M77 74 H132" fill="none" stroke="#2F5BD3" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="119" cy="62" r="13" fill="#EF7C5B"/>
+</g></g>
+      <text x="81" y="486" fill="#2F5BD3" font-family="Manrope, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="1.5">A CLEARER THOUGHT</text>
+      <text x="81" y="572" fill="#17212B" font-family="Manrope, Arial, sans-serif" font-size="67" font-weight="700" letter-spacing="-2">Your words here.</text>
+      <text x="81" y="637" fill="#53606B" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="500">Keep it short, warm and human.</text>
+      <text x="81" y="1035" fill="#17212B" font-family="Manrope, Arial, sans-serif" font-size="19" font-weight="650">Clearer Days · ADHD coaching with Riya</text>
+</svg>
