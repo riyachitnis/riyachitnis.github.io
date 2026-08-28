@@ -5,7 +5,7 @@ Three-page, light-only website and digital brand system for Clearer Days.
 ## Site map
 
 - `index.html` - concise homepage and 60-second breathing reset
-- `coaching.html` - coaching approach, packages, prices and FAQ
+- `coaching.html` - coaching approach, support options and FAQ
 - `about.html` - Riya's background, values and coaching scope
 
 ## Brand kit
