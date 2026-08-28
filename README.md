@@ -1,4 +1,4 @@
-# Riya Chitnis — ADHD Coach Website
+# Clearer Days — ADHD Coaching with Riya Chitnis
 
 
 ## 🚀 Deployment & Local Preview

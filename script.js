@@ -1,364 +1,173 @@
-/* ==========================================================================
-   RIYA CHITNIS - ADHD COACHING PLATFORM
-   Apple-inspired Interactive Client Experience Logic
-   ========================================================================== */
-
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Theme Toggle (Apple Dark / Light)
-  initThemeToggle();
-
-  // 2. Mobile Navigation Toggle
-  initMobileMenu();
-
-  // 3. Interactive ADHD Clarity Self-Assessment
-  initQuiz();
-
-  // 4. Currency Switcher (AED / USD)
-  initCurrencyToggle();
-
-  // 5. Interactive Breathing / Focus Pacer
-  initBreathingTool();
-
-  // 6. FAQ Accordion Logic
-  initFAQ();
-
-  // 7. Booking Modal & Lead Conversion
-  initBookingModal();
-
-  // 8. Header scroll backdrop elevation
-  initScrollEffects();
+  initMenu();
+  initFrictionTool();
+  initWhatsAppLinks();
+  initBreathingReset();
+  initReveals();
+  document.getElementById('year').textContent = new Date().getFullYear();
 });
 
-/* --------------------------------------------------------------------------
-   1. THEME TOGGLE
-   -------------------------------------------------------------------------- */
-function initThemeToggle() {
-  const themeToggleBtn = document.getElementById('themeToggleBtn');
-  if (!themeToggleBtn) return;
+function initMenu() {
+  const button = document.getElementById('menuButton');
+  const nav = document.getElementById('siteNav');
+  if (!button || !nav) return;
 
-  const currentTheme = localStorage.getItem('rc_theme') || 'dark';
-  if (currentTheme === 'light') {
-    document.body.classList.add('light-theme');
-    updateThemeIcon(true);
-  }
-
-  themeToggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('light-theme');
-    const isLight = document.body.classList.contains('light-theme');
-    localStorage.setItem('rc_theme', isLight ? 'light' : 'dark');
-    updateThemeIcon(isLight);
-  });
-}
-
-function updateThemeIcon(isLight) {
-  const themeToggleBtn = document.getElementById('themeToggleBtn');
-  if (!themeToggleBtn) return;
-  themeToggleBtn.innerHTML = isLight
-    ? `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`
-    : `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
-}
-
-/* --------------------------------------------------------------------------
-   2. MOBILE NAVIGATION
-   -------------------------------------------------------------------------- */
-function initMobileMenu() {
-  const mobileBtn = document.getElementById('mobileMenuBtn');
-  const navLinks = document.getElementById('navLinks');
-  if (!mobileBtn || !navLinks) return;
-
-  mobileBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('mobile-open');
-  });
-
-  // Close when clicking nav links
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('mobile-open');
-    });
-  });
-}
-
-/* --------------------------------------------------------------------------
-   3. INTERACTIVE ADHD CLARITY QUIZ
-   -------------------------------------------------------------------------- */
-function initQuiz() {
-  const steps = document.querySelectorAll('.quiz-step');
-  const progressFill = document.getElementById('quizProgressFill');
-  const scoreAnswers = [];
-
-  window.selectQuizOption = function(stepIndex, points, text) {
-    scoreAnswers[stepIndex - 1] = { points, text };
-    
-    // highlight selected button in step
-    const currentStepEl = document.getElementById(`quizStep${stepIndex}`);
-    if (currentStepEl) {
-      currentStepEl.querySelectorAll('.quiz-option-btn').forEach(btn => btn.classList.remove('selected'));
-      event.currentTarget.classList.add('selected');
-    }
-
-    // Auto advance after slight delay for smooth feel
-    setTimeout(() => {
-      goToQuizStep(stepIndex + 1);
-    }, 280);
+  const close = () => {
+    button.setAttribute('aria-expanded', 'false');
+    nav.classList.remove('open');
+    document.body.classList.remove('menu-open');
   };
 
-  window.goToQuizStep = function(stepNum) {
-    steps.forEach(step => step.classList.remove('active'));
-    
-    const targetStep = document.getElementById(`quizStep${stepNum}`);
-    if (targetStep) {
-      targetStep.classList.add('active');
-      if (progressFill) {
-        const percent = Math.min(100, (stepNum / 4) * 100);
-        progressFill.style.width = `${percent}%`;
+  button.addEventListener('click', () => {
+    const open = button.getAttribute('aria-expanded') !== 'true';
+    button.setAttribute('aria-expanded', String(open));
+    nav.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
+  });
+  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', close));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') close();
+  });
+}
+
+function initFrictionTool() {
+  const tool = document.querySelector('[data-friction-tool]');
+  if (!tool) return;
+  const tabs = [...tool.querySelectorAll('[role="tab"]')];
+
+  function selectTab(tab, moveFocus = false) {
+    tabs.forEach(item => {
+      const selected = item === tab;
+      item.setAttribute('aria-selected', String(selected));
+      item.tabIndex = selected ? 0 : -1;
+      const panel = document.getElementById(item.getAttribute('aria-controls'));
+      if (panel) {
+        panel.hidden = !selected;
+        panel.classList.toggle('active', selected);
       }
-    } else if (stepNum > 4) {
-      // Show results
-      showQuizResults();
-    }
-  };
-
-  function showQuizResults() {
-    steps.forEach(step => step.classList.remove('active'));
-    const resultStep = document.getElementById('quizStepResult');
-    if (resultStep) {
-      resultStep.classList.add('active');
-      if (progressFill) progressFill.style.width = '100%';
-    }
-
-    // Calculate total score
-    let totalScore = 0;
-    scoreAnswers.forEach(ans => {
-      if (ans && ans.points) totalScore += ans.points;
     });
-
-    const resultBadge = document.getElementById('resultBadge');
-    const resultTitle = document.getElementById('resultTitle');
-    const resultDesc = document.getElementById('resultDesc');
-    const matchScore = document.getElementById('matchScore');
-
-    if (totalScore >= 10) {
-      if (resultBadge) resultBadge.textContent = "High Match • Exceptional Potential for Coaching";
-      if (resultTitle) resultTitle.textContent = "You are ready for transformative ADHD Architecture.";
-      if (resultDesc) resultDesc.textContent = "Your responses reveal classic high-potential ADHD patterns: brilliant ideas hampered by executive function friction, dopamine fatigue, or overwhelming context-switching. 1-on-1 coaching with Riya will help you build custom external systems rather than relying on exhausting brute willpower.";
-      if (matchScore) matchScore.textContent = "96% Fit";
-    } else {
-      if (resultBadge) resultBadge.textContent = "Strong Match • Targeted System Upgrade";
-      if (resultTitle) resultTitle.textContent = "ADHD Clarity & Flow Optimization";
-      if (resultDesc) resultDesc.textContent = "You have solid foundational strengths, but specific friction points like time estimation or task paralysis are draining your daily energy. Targeted ADHD coaching will streamline your workflows and create effortless momentum.";
-      if (matchScore) matchScore.textContent = "88% Fit";
-    }
+    if (moveFocus) tab.focus();
   }
 
-  window.restartQuiz = function() {
-    scoreAnswers.length = 0;
-    document.querySelectorAll('.quiz-option-btn').forEach(btn => btn.classList.remove('selected'));
-    goToQuizStep(1);
-  };
-}
-
-/* --------------------------------------------------------------------------
-   4. CURRENCY SWITCHER (AED / USD)
-   -------------------------------------------------------------------------- */
-function initCurrencyToggle() {
-  const btnAED = document.getElementById('btnAED');
-  const btnUSD = document.getElementById('btnUSD');
-  const prices = document.querySelectorAll('.price-amount');
-
-  if (!btnAED || !btnUSD) return;
-
-  const priceData = {
-    AED: {
-      single: "AED 950",
-      twelve: "AED 9,800",
-      exec: "AED 16,500"
-    },
-    USD: {
-      single: "$260",
-      twelve: "$2,670",
-      exec: "$4,490"
-    }
-  };
-
-  function updatePrices(currency) {
-    const p1 = document.getElementById('priceSingle');
-    const p2 = document.getElementById('priceTwelve');
-    const p3 = document.getElementById('priceExec');
-
-    if (p1) p1.textContent = priceData[currency].single;
-    if (p2) p2.textContent = priceData[currency].twelve;
-    if (p3) p3.textContent = priceData[currency].exec;
-  }
-
-  btnAED.addEventListener('click', () => {
-    btnAED.classList.add('active');
-    btnUSD.classList.remove('active');
-    updatePrices('AED');
-  });
-
-  btnUSD.addEventListener('click', () => {
-    btnUSD.classList.add('active');
-    btnAED.classList.remove('active');
-    updatePrices('USD');
-  });
-}
-
-/* --------------------------------------------------------------------------
-   5. INTERACTIVE BREATHING / FOCUS RESET TOOL
-   -------------------------------------------------------------------------- */
-function initBreathingTool() {
-  const statusText = document.getElementById('breathingStatus');
-  const actionBtn = document.getElementById('breathingToggleBtn');
-  const circle = document.querySelector('.breathing-circle-pulse');
-  if (!statusText || !actionBtn || !circle) return;
-
-  let isRunning = true;
-  let cycleTimer = null;
-
-  const cycleTexts = ["Inhale deeply...", "Hold focus...", "Exhale gently...", "Rest & Reset..."];
-  let textIndex = 0;
-
-  function runCycle() {
-    statusText.textContent = cycleTexts[textIndex];
-    textIndex = (textIndex + 1) % cycleTexts.length;
-  }
-
-  cycleTimer = setInterval(runCycle, 2000);
-
-  actionBtn.addEventListener('click', () => {
-    if (isRunning) {
-      clearInterval(cycleTimer);
-      circle.style.animationPlayState = 'paused';
-      statusText.textContent = 'Paused';
-      actionBtn.textContent = 'Resume Reset';
-      isRunning = false;
-    } else {
-      circle.style.animationPlayState = 'running';
-      cycleTimer = setInterval(runCycle, 2000);
-      statusText.textContent = 'Inhale deeply...';
-      actionBtn.textContent = 'Pause Reset';
-      isRunning = true;
-    }
-  });
-}
-
-/* --------------------------------------------------------------------------
-   6. FAQ ACCORDION
-   -------------------------------------------------------------------------- */
-function initFAQ() {
-  const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
-    const questionBtn = item.querySelector('.faq-question');
-    if (!questionBtn) return;
-
-    questionBtn.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
-      // Close all
-      faqItems.forEach(i => i.classList.remove('active'));
-      // Toggle clicked
-      if (!isActive) {
-        item.classList.add('active');
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => selectTab(tab));
+    tab.addEventListener('keydown', event => {
+      let nextIndex;
+      if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+      if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
+      if (event.key === 'Home') nextIndex = 0;
+      if (event.key === 'End') nextIndex = tabs.length - 1;
+      if (nextIndex !== undefined) {
+        event.preventDefault();
+        selectTab(tabs[nextIndex], true);
       }
     });
   });
 }
 
-/* --------------------------------------------------------------------------
-   7. BOOKING MODAL & CONSULTATION
-   -------------------------------------------------------------------------- */
-function initBookingModal() {
-  const modal = document.getElementById('bookingModal');
-  const closeBtn = document.getElementById('modalCloseBtn');
-  const bookingForm = document.getElementById('bookingForm');
-  const toast = document.getElementById('toastMsg');
-  const openButtons = document.querySelectorAll('[data-open-modal="booking"]');
-
-  if (!modal) return;
-
-  window.openBookingModal = function(packagePreset = '') {
-    modal.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    if (packagePreset) {
-      const select = document.getElementById('modalProgramSelect');
-      if (select) select.value = packagePreset;
-    }
+function initWhatsAppLinks() {
+  const phone = '971502278067';
+  const messages = {
+    fit: "Hi Riya, I found Clearer Days and I'd like to book a free 20-minute conversation about ADHD coaching.",
+    reset: "Hi Riya, I found Clearer Days and I'd like to learn more about the Focus Reset session (AED 500).",
+    momentum: "Hi Riya, I found Clearer Days and I'd like to learn more about the four-week Momentum coaching option (AED 1,800).",
+    partnership: "Hi Riya, I found Clearer Days and I'd like to learn more about the eight-week Ongoing Partnership (AED 3,200)."
   };
 
-  window.closeBookingModal = function() {
-    modal.classList.remove('open');
-    document.body.style.overflow = '';
-  };
-
-  openButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const preset = btn.getAttribute('data-package') || '';
-      openBookingModal(preset);
-    });
+  document.querySelectorAll('[data-whatsapp]').forEach(link => {
+    const key = link.dataset.whatsapp;
+    link.href = `https://wa.me/${phone}?text=${encodeURIComponent(messages[key] || messages.fit)}`;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
   });
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeBookingModal);
-  }
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      closeBookingModal();
-    }
-  });
-
-  // Handle escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('open')) {
-      closeBookingModal();
-    }
-  });
-
-  if (bookingForm) {
-    bookingForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('bookingName').value;
-      const email = document.getElementById('bookingEmail').value;
-      const location = document.getElementById('bookingLocation').value;
-      const program = document.getElementById('modalProgramSelect').value;
-      const notes = document.getElementById('bookingNotes').value;
-
-      closeBookingModal();
-      showToast(`Thank you, ${name}! Your consultation request is received. Riya will be in touch shortly.`);
-
-      // Optional: Prepare quick WhatsApp message link or redirect
-      const cleanPhone = "+971500000000"; // Example UAE WhatsApp contact
-      const waMsg = encodeURIComponent(`Hi Riya! My name is ${name}. I am in ${location} and interested in ${program} ADHD coaching. Notes: ${notes}`);
-      console.log(`Booking request logged: ${name} (${email}) - ${program}`);
-    });
-  }
 }
 
-function showToast(message) {
-  const toast = document.getElementById('toastMsg');
-  const toastText = document.getElementById('toastText');
-  if (!toast) return;
+function initBreathingReset() {
+  const button = document.getElementById('breathButton');
+  const restart = document.getElementById('breathRestart');
+  const ring = document.getElementById('breathRing');
+  const count = document.getElementById('breathCount');
+  const status = document.getElementById('breathStatus');
+  if (!button || !restart || !ring || !count || !status) return;
 
-  if (toastText) toastText.textContent = message;
-  toast.classList.add('show');
+  let timer = null;
+  let phaseTimer = null;
+  let remaining = 60;
+  let running = false;
+  const phases = [
+    { label: 'Breathe in slowly', className: 'inhale', duration: 4000 },
+    { label: 'Pause gently', className: '', duration: 2000 },
+    { label: 'Breathe out slowly', className: 'exhale', duration: 6000 }
+  ];
+  let phase = 0;
 
-  setTimeout(() => {
-    toast.classList.remove('show');
-  }, 4500);
+  function showPhase() {
+    const current = phases[phase];
+    ring.classList.remove('inhale', 'exhale');
+    if (current.className) ring.classList.add(current.className);
+    status.textContent = current.label;
+    phaseTimer = window.setTimeout(() => {
+      if (!running) return;
+      phase = (phase + 1) % phases.length;
+      showPhase();
+    }, current.duration);
+  }
+
+  function stop(completed = false) {
+    running = false;
+    window.clearInterval(timer);
+    window.clearTimeout(phaseTimer);
+    timer = null;
+    phaseTimer = null;
+    ring.classList.remove('inhale', 'exhale');
+    button.textContent = completed ? 'Start again' : 'Resume breathing';
+    status.textContent = completed ? 'Reset complete. Take your time.' : 'Paused';
+    restart.hidden = completed;
+  }
+
+  function start(reset = false) {
+    if (reset || remaining <= 0) {
+      remaining = 60;
+      phase = 0;
+      count.textContent = remaining;
+    }
+    running = true;
+    button.textContent = 'Pause';
+    restart.hidden = false;
+    showPhase();
+    timer = window.setInterval(() => {
+      remaining -= 1;
+      count.textContent = Math.max(remaining, 0);
+      if (remaining <= 0) stop(true);
+    }, 1000);
+  }
+
+  button.addEventListener('click', () => running ? stop(false) : start(remaining <= 0));
+  restart.addEventListener('click', () => {
+    stop(false);
+    remaining = 60;
+    phase = 0;
+    count.textContent = remaining;
+    button.textContent = 'Start breathing';
+    status.textContent = 'Ready when you are';
+    restart.hidden = true;
+  });
 }
 
-/* --------------------------------------------------------------------------
-   8. HEADER SCROLL BACKDROP ELEVATION
-   -------------------------------------------------------------------------- */
-function initScrollEffects() {
-  const header = document.querySelector('.site-header');
-  if (!header) return;
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
-      header.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.3)';
-    } else {
-      header.style.boxShadow = 'none';
-    }
-  });
+function initReveals() {
+  const items = document.querySelectorAll('.reveal');
+  if (!items.length) return;
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    items.forEach(item => item.classList.add('visible'));
+    return;
+  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px' });
+  items.forEach(item => observer.observe(item));
 }

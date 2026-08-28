@@ -1,1149 +1,173 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Riya Chitnis | ADHD Coach — Abu Dhabi & Worldwide</title>
-  <meta name="description" content="Riya Chitnis is a certified ADHD Coach based in Abu Dhabi, UAE. Tailored 1-on-1 executive function coaching, dopamine-friendly systems, and neurodiversity-affirming transformation.">
-  <meta name="keywords" content="ADHD Coach, Riya Chitnis, Abu Dhabi ADHD Coach, UAE ADHD Coaching, Neurodiversity, Executive Function Coach, Adult ADHD, Dubai ADHD Coach">
-  
-  <!-- Open Graph Meta Tags for Social Sharing -->
-  <meta property="og:title" content="Riya Chitnis | ADHD Coach — Abu Dhabi & Worldwide">
-  <meta property="og:description" content="Stop fighting willpower. Build custom executive systems designed specifically for your neurodivergent brain.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clearer Days | ADHD Coaching in Abu Dhabi &amp; Online</title>
+  <meta name="description" content="Clearer Days offers practical, compassionate ADHD coaching with Riya Chitnis for adults in Abu Dhabi and online worldwide.">
+  <meta name="theme-color" content="#fbfaf7">
+  <meta property="og:title" content="Clearer Days | ADHD Coaching with Riya Chitnis">
+  <meta property="og:description" content="Practical support for busy brains. Build a life that works with you, one doable step at a time.">
   <meta property="og:image" content="riyachitnis.JPG">
   <meta property="og:type" content="website">
-
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
-
-  <!-- Main Stylesheet -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%232554d8%22/><path d=%22M25 54c15 0 15-25 30-25s15 25 30 25M25 70c15 0 15-25 30-25s15 25 30 25%22 fill=%22none%22 stroke=%22white%22 stroke-width=%228%22 stroke-linecap=%22round%22/></svg>">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- ========================================================================
-       1. ANNOUNCEMENT RIBBON
-       ======================================================================== -->
-  <aside class="announcement-bar" aria-label="Announcement">
-    <div class="container">
-      <span class="announcement-tag">Now Booking</span>
-      In-Person Sessions in Abu Dhabi &amp; Dubai • Virtual Coaching Worldwide 
-      <a href="#programs" onclick="openBookingModal('The 12-Week ADHD Mastery'); return false;">
-        Book Free 20-Min Clarity Call &rsaquo;
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="shell nav-wrap">
+      <a class="brand" href="#top" aria-label="Clearer Days, home">
+        <span class="brand-mark" aria-hidden="true">CD</span>
+        <span class="brand-copy"><strong>Clearer Days</strong><small>ADHD coaching with Riya</small></span>
       </a>
-    </div>
-  </aside>
-
-  <!-- ========================================================================
-       2. NAVIGATION HEADER (APPLE GLASS STYLE)
-       ======================================================================== -->
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="#" class="brand-link">
-        <span>Riya Chitnis</span>
-        <span class="brand-badge">ADHD Coach</span>
-      </a>
-
-      <nav>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#philosophy" class="nav-link">Approach</a></li>
-          <li><a href="#pillars" class="nav-link">Core Pillars</a></li>
-          <li><a href="#quiz" class="nav-link">ADHD Check</a></li>
-          <li><a href="#programs" class="nav-link">Programs</a></li>
-          <li><a href="#location" class="nav-link">Abu Dhabi Hub</a></li>
-          <li><a href="#faq" class="nav-link">FAQ</a></li>
-        </ul>
+      <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="siteNav"><span class="sr-only">Open menu</span><span></span><span></span></button>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+        <a href="#support">How I help</a><a href="#approach">Approach</a><a href="#work-with-me">Work with me</a><a href="#about">About</a><a href="#faq">FAQ</a>
       </nav>
-
-      <div class="nav-actions">
-        <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Theme" aria-label="Toggle Theme">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-        </button>
-
-        <a href="#booking" class="btn-nav-cta" data-open-modal="booking">
-          Consultation
-        </a>
-
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
-      </div>
+      <a class="button button-small nav-cta" data-whatsapp="fit" href="https://wa.me/971502278067">Start a conversation</a>
     </div>
   </header>
 
-  <main>
-    <!-- ======================================================================
-         3. HERO SECTION (APPLE KEYNOTE STYLE)
-         ====================================================================== -->
-    <section class="hero-section">
-      <div class="hero-glow-bg"></div>
-      <div class="container hero-content">
-        
-        <div class="badge-eyebrow">
-          <span class="badge-dot"></span>
-          ADHD Coaching • Abu Dhabi &amp; Worldwide
-        </div>
-
-        <h1 class="hero-headline">
-          Your brain isn't broken.
-          <span class="gradient-accent">It's built for a different world.</span>
-        </h1>
-
-        <p class="hero-subhead">
-          Transform ADHD from a constant cycle of overwhelm, friction, and procrastination into your greatest strategic advantage. Evidence-based executive function coaching, dopamine-aligned habit architecture, and compassionate accountability.
-        </p>
-
-        <div class="hero-cta-group">
-          <button class="btn-primary" data-open-modal="booking" data-package="The 12-Week ADHD Mastery">
-            Schedule Free Clarity Call
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </button>
-          <a href="#quiz" class="btn-secondary">
-            Take 60-Sec ADHD Check
-          </a>
-        </div>
-
-        <!-- Hero Spotlight Card featuring Riya's Picture -->
-        <div class="hero-spotlight">
-          <div class="spotlight-card">
-            
-            <div class="spotlight-visual">
-              <div class="photo-wrapper">
-                <img src="riyachitnis.JPG" alt="Riya Chitnis - ADHD Coach in Abu Dhabi" loading="eager">
-                <div class="photo-badge-abu-dhabi">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                  </svg>
-                  <span>Abu Dhabi Studio &amp; Global Video</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="spotlight-details">
-              <div class="badge-eyebrow" style="margin-bottom: 4px; align-self: flex-start;">
-                Certified ADHD Coach
-              </div>
-              <p class="spotlight-quote">
-                "ADHD is not a lack of willpower. It is an <span>attention regulation operating system</span> that requires tailored design."
-              </p>
-              <p class="spotlight-bio-snippet">
-                Hi, I'm <strong>Riya Chitnis</strong>. Based in Abu Dhabi, I partner with ambitious professionals, creative entrepreneurs, and students across the UAE and globally to replace guilt and friction with clarity, momentum, and deep self-trust.
-              </p>
-              <div class="spotlight-tags">
-                <span class="mini-tag">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Executive Function
-                </span>
-                <span class="mini-tag">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Dopamine Mapping
-                </span>
-                <span class="mini-tag">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Time Blindness
-                </span>
-                <span class="mini-tag">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  RSD &amp; Emotional Regulation
-                </span>
-              </div>
-            </div>
-
+  <main id="main">
+    <section class="hero section">
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> Clearer Days · Abu Dhabi + online</p>
+          <h1>Life feels lighter when your systems finally fit <em>you.</em></h1>
+          <p class="hero-lede">Practical, judgment-free support for adults who are tired of knowing what to do—but still feeling stuck when it is time to begin.</p>
+          <div class="hero-actions">
+            <a class="button" data-whatsapp="fit" href="https://wa.me/971502278067">Book a free 20-minute chat <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#support">See how I can help <span aria-hidden="true">↓</span></a>
           </div>
+          <ul class="hero-notes" aria-label="Session availability"><li>Adults 18+</li><li>English · Hindi · Marathi</li><li>Online worldwide</li></ul>
         </div>
-
-        <!-- Social Proof Metrics Bar -->
-        <div class="hero-proof-bar">
-          <div class="proof-item">
-            <div class="proof-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            </div>
-            <div class="proof-text">
-              <span class="proof-title">100% Neuro-Affirming</span>
-              <span class="proof-desc">No forced neurotypical rules</span>
-            </div>
+        <div class="hero-portrait reveal reveal-delay">
+          <div class="portrait-card">
+            <img src="riyachitnis.JPG" alt="Riya Chitnis, ADHD coach based in Abu Dhabi" width="853" height="853">
+            <div class="portrait-caption"><span class="status-dot" aria-hidden="true"></span><span><strong>Hi, I’m Riya.</strong><br>Let’s make the next step feel possible.</span></div>
           </div>
-
-          <div class="proof-item">
-            <div class="proof-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            </div>
-            <div class="proof-text">
-              <span class="proof-title">Abu Dhabi &amp; Hybrid</span>
-              <span class="proof-desc">In-person &amp; global Zoom</span>
-            </div>
-          </div>
-
-          <div class="proof-item">
-            <div class="proof-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            </div>
-            <div class="proof-text">
-              <span class="proof-title">4.9 / 5.0 Rating</span>
-              <span class="proof-desc">Validated by client breakthroughs</span>
-            </div>
-          </div>
+          <div class="portrait-note note-one" aria-hidden="true">small steps</div><div class="portrait-note note-two" aria-hidden="true">real momentum</div>
         </div>
+      </div>
+      <div class="shell hero-prompt reveal"><span>Scroll for a calmer way forward</span><i aria-hidden="true"></i></div>
+    </section>
 
+    <section class="support section" id="support">
+      <div class="shell narrow center reveal">
+        <p class="eyebrow eyebrow-centered"><span></span> Start where you are</p>
+        <h2>Where does your day get stuck?</h2>
+        <p class="section-intro">You do not need to explain everything perfectly. Choose the part that feels most familiar.</p>
+      </div>
+      <div class="shell friction-tool reveal" data-friction-tool>
+        <div class="friction-tabs" role="tablist" aria-label="Common ADHD challenges">
+          <button id="tab-starting" role="tab" aria-selected="true" aria-controls="panel-starting" data-friction="starting">Starting</button>
+          <button id="tab-time" role="tab" aria-selected="false" aria-controls="panel-time" data-friction="time" tabindex="-1">Time</button>
+          <button id="tab-overwhelm" role="tab" aria-selected="false" aria-controls="panel-overwhelm" data-friction="overwhelm" tabindex="-1">Overwhelm</button>
+          <button id="tab-consistency" role="tab" aria-selected="false" aria-controls="panel-consistency" data-friction="consistency" tabindex="-1">Consistency</button>
+        </div>
+        <div class="friction-panels">
+          <article id="panel-starting" class="friction-panel active" role="tabpanel" aria-labelledby="tab-starting" tabindex="0">
+            <div class="panel-number">01</div><div><p class="panel-quote">“I want to do it. Why can’t I just start?”</p><h3>We make the first step smaller, clearer and easier to enter.</h3><p>Together, we look at what creates friction—uncertainty, boredom, pressure or too many hidden steps—and design an opening move that works in your actual environment.</p></div><div class="mini-map"><span>notice</span><i></i><span>shrink</span><i></i><span>begin</span></div>
+          </article>
+          <article id="panel-time" class="friction-panel" role="tabpanel" aria-labelledby="tab-time" tabindex="0" hidden>
+            <div class="panel-number">02</div><div><p class="panel-quote">“The day disappears before I catch up with it.”</p><h3>We turn invisible time into cues you can see and use.</h3><p>We build realistic anchors around transitions, planning and deadlines—without trying to schedule every minute or pretending every day has the same energy.</p></div><div class="mini-map"><span>see</span><i></i><span>anchor</span><i></i><span>adjust</span></div>
+          </article>
+          <article id="panel-overwhelm" class="friction-panel" role="tabpanel" aria-labelledby="tab-overwhelm" tabindex="0" hidden>
+            <div class="panel-number">03</div><div><p class="panel-quote">“Everything feels urgent, so I do nothing.”</p><h3>We reduce the noise and find the one decision that matters now.</h3><p>You will learn ways to unload mental clutter, separate urgency from importance and create a gentle route back when emotions or expectations take over.</p></div><div class="mini-map"><span>pause</span><i></i><span>sort</span><i></i><span>choose</span></div>
+          </article>
+          <article id="panel-consistency" class="friction-panel" role="tabpanel" aria-labelledby="tab-consistency" tabindex="0" hidden>
+            <div class="panel-number">04</div><div><p class="panel-quote">“My routines work—until suddenly they don’t.”</p><h3>We build flexible systems that expect life to change.</h3><p>Instead of chasing perfect streaks, we design light, medium and minimum versions of your routines so that restarting becomes a normal skill—not a failure.</p></div><div class="mini-map"><span>test</span><i></i><span>flex</span><i></i><span>return</span></div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- ======================================================================
-         4. PHILOSOPHY & COMPARISON SECTION
-         ====================================================================== -->
-    <section class="philosophy-section" id="philosophy">
-      <div class="container">
-        
-        <div class="section-header">
-          <p class="section-eyebrow">The Philosophy</p>
-          <h2 class="section-title">Why standard advice fails the ADHD mind.</h2>
-          <p class="section-desc">
-            Mainstream productivity books tell you to "just use a planner" or "try harder." For a neurodivergent brain, that only breeds burnout and shame. Here is how we redesign your architecture.
-          </p>
+    <section class="approach section" id="approach">
+      <div class="shell approach-grid">
+        <div class="approach-heading reveal">
+          <p class="eyebrow"><span></span> A different kind of support</p><h2>Not another system you have to be perfect at.</h2>
+          <p>I will not hand you a generic planner and tell you to try harder. Coaching is a place to understand what is happening, experiment without shame and build tools around your strengths, responsibilities and energy.</p>
+          <a class="text-link" data-whatsapp="fit" href="https://wa.me/971502278067">Tell me what feels hard <span aria-hidden="true">↗</span></a>
         </div>
-
-        <div class="comparison-grid">
-          
-          <!-- Traditional Card -->
-          <div class="comparison-card traditional">
-            <div class="comparison-header">
-              <div class="comparison-icon">✕</div>
-              <h3>Conventional Productivity Advice</h3>
-            </div>
-            <ul class="comparison-list">
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
-                <span><strong>Relies on sheer willpower:</strong> Assumes motivation is a moral choice rather than a dopamine neurotransmitter mechanism.</span>
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
-                <span><strong>Rigid, linear schedules:</strong> Fails the moment unexpected disruptions occur, triggering shame spirals.</span>
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
-                <span><strong>Ignores emotional dysregulation:</strong> Overlooks the massive energy toll of Rejection Sensitive Dysphoria (RSD) and task paralysis.</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Riya's ADHD Architecture Card -->
-          <div class="comparison-card adhd-optimized">
-            <div class="comparison-header">
-              <div class="comparison-icon">✓</div>
-              <h3>Riya’s Neuro-Affirming Coaching</h3>
-            </div>
-            <ul class="comparison-list">
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Dopamine-driven systems:</strong> We engineer high-interest initiation cues and friction-free micro-steps tailored to your interest-based nervous system.</span>
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Dynamic &amp; modular frameworks:</strong> Systems built with elastic tolerance that flex with your energy cycles, hyperfocus, and rest days.</span>
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Holistic nervous system alignment:</strong> Practical emotional regulation tools to dissolve task avoidance, anxiety, and imposter syndrome.</span>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-
+        <ol class="approach-steps reveal">
+          <li><span>01</span><div><h3>Notice without judgment</h3><p>We slow the pattern down and get curious about what helps, what drains you and what keeps repeating.</p></div></li>
+          <li><span>02</span><div><h3>Design for real life</h3><p>We choose one workable experiment that fits your environment—not an imaginary perfect week.</p></div></li>
+          <li><span>03</span><div><h3>Review and adapt</h3><p>We learn from what happened, keep what worked and adjust the rest without turning it into a verdict on you.</p></div></li>
+        </ol>
       </div>
     </section>
 
-    <!-- ======================================================================
-         5. CORE COACHING PILLARS (APPLE BENTO GRID)
-         ====================================================================== -->
-    <section class="pillars-section" id="pillars">
-      <div class="container">
-        
-        <div class="section-header">
-          <p class="section-eyebrow">The Coaching Pillars</p>
-          <h2 class="section-title">Engineered for how your brain actually operates.</h2>
-          <p class="section-desc">
-            Six foundational pillars designed to eliminate executive dysfunction and unlock continuous, low-stress achievement.
-          </p>
+    <section class="work section" id="work-with-me">
+      <div class="shell narrow center reveal">
+        <p class="eyebrow eyebrow-centered"><span></span> Work with me</p><h2>Choose the amount of support you need.</h2><p class="section-intro">Every option begins with a free 20-minute conversation to make sure coaching feels like a useful fit.</p>
+      </div>
+      <div class="shell offer-grid">
+        <article class="offer-card reveal">
+          <div class="offer-top"><span>One focused session</span><span>01</span></div><h3>Focus Reset</h3><p class="offer-purpose">For one problem that needs a calmer, clearer way forward.</p><p class="price"><strong>AED 500</strong><span>60 minutes</span></p>
+          <ul><li>One focused coaching session</li><li>A simple personal action plan</li><li>Online or Abu Dhabi by arrangement</li></ul>
+          <a class="button button-outline" data-whatsapp="reset" href="https://wa.me/971502278067">Ask about Focus Reset <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="offer-card featured reveal reveal-delay">
+          <div class="offer-label">A good place to begin</div><div class="offer-top"><span>Four-week support</span><span>02</span></div><h3>Momentum</h3><p class="offer-purpose">For building one important routine, project or life system with support.</p><p class="price"><strong>AED 1,800</strong><span>4 weekly sessions</span></p>
+          <ul><li>Four private 50-minute sessions</li><li>One clear goal and weekly experiments</li><li>A brief between-session check-in</li></ul>
+          <a class="button" data-whatsapp="momentum" href="https://wa.me/971502278067">Ask about Momentum <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="offer-card reveal reveal-delay-2">
+          <div class="offer-top"><span>Eight-week support</span><span>03</span></div><h3>Ongoing Partnership</h3><p class="offer-purpose">For connected challenges that need more time, practice and accountability.</p><p class="price"><strong>AED 3,200</strong><span>8 weekly sessions</span></p>
+          <ul><li>Eight private 50-minute sessions</li><li>Structured WhatsApp accountability</li><li>A flexible toolkit you can keep using</li></ul>
+          <a class="button button-outline" data-whatsapp="partnership" href="https://wa.me/971502278067">Ask about Partnership <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+      <p class="support-hours shell reveal">Between-session messages are answered during agreed working hours. Coaching is currently available to adults aged 18 and over.</p>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="shell about-grid">
+        <div class="about-photo reveal"><img src="riyachitnis.JPG" alt="Portrait of Riya Chitnis" width="853" height="853" loading="lazy"><div class="photo-note"><span>Based in</span><strong>Abu Dhabi, UAE</strong></div></div>
+        <div class="about-copy reveal reveal-delay">
+          <p class="eyebrow"><span></span> Meet Riya</p><h2>I understand the gap between caring deeply and still feeling stuck.</h2>
+          <p>I have spent much of my life alongside people with ADHD—listening to what is difficult, noticing what helps and understanding how easily capable people can be misunderstood.</p>
+          <p>Five years of medical education and clinical placements shaped the way I listen, explain complex ideas and stay calm when life feels overwhelming. My coaching brings that foundation together with practical problem-solving, warmth and an understanding of the pressures adults face today.</p>
+          <p>I am not here to make you perform a more “normal” version of yourself. I am here to help you build days that are clearer, kinder and more workable for the brain you have.</p>
+          <div class="about-facts"><div><strong>5 years</strong><span>medical education and clinical placements</span></div><div><strong>3 languages</strong><span>English, Hindi and Marathi</span></div><div><strong>1:1</strong><span>personal, collaborative coaching</span></div></div>
         </div>
-
-        <div class="bento-grid">
-          
-          <!-- Bento 1 (Span 8) -->
-          <div class="bento-card bento-span-8">
-            <div>
-              <div class="bento-icon-wrapper">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
-              </div>
-              <h3 class="bento-title">Dopamine Architecture &amp; Task Initiation</h3>
-              <p class="bento-desc">
-                Conquer the "Wall of Awful" and task paralysis. We construct personalized initiation rituals, gamified micro-milestones, and low-friction launchpads that get you into momentum without agonizing delay.
-              </p>
-            </div>
-            <div class="bento-pill-tags">
-              <span class="bento-tag">Task Activation</span>
-              <span class="bento-tag">Dopamine Stacking</span>
-              <span class="bento-tag">Anti-Procrastination</span>
-            </div>
-          </div>
-
-          <!-- Bento 2 (Span 4) -->
-          <div class="bento-card bento-span-4">
-            <div>
-              <div class="bento-icon-wrapper">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              </div>
-              <h3 class="bento-title">Time Blindness &amp; Anchoring</h3>
-              <p class="bento-desc">
-                Turn invisible time into tangible reality. Implement visual time anchors, realistic buffer estimations, and deadline decompression strategies.
-              </p>
-            </div>
-            <div class="bento-pill-tags">
-              <span class="bento-tag">Visual Clocks</span>
-              <span class="bento-tag">Buffer Management</span>
-            </div>
-          </div>
-
-          <!-- Bento 3 (Span 4) -->
-          <div class="bento-card bento-span-4">
-            <div>
-              <div class="bento-icon-wrapper">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              </div>
-              <h3 class="bento-title">Emotional Regulation &amp; RSD</h3>
-              <p class="bento-desc">
-                Deconstruct Rejection Sensitive Dysphoria, imposter syndrome, and sudden overwhelm with cognitive grounding and somatic recovery techniques.
-              </p>
-            </div>
-            <div class="bento-pill-tags">
-              <span class="bento-tag">RSD Shielding</span>
-              <span class="bento-tag">Somatic Calm</span>
-            </div>
-          </div>
-
-          <!-- Bento 4 (Span 8) -->
-          <div class="bento-card bento-span-8">
-            <div>
-              <div class="bento-icon-wrapper">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-              </div>
-              <h3 class="bento-title">Executive Function for High-Stakes Professionals</h3>
-              <p class="bento-desc">
-                Tailored for UAE executives, tech founders, consultants, and creators. We streamline high-volume communication, meeting fatigue, decision overload, and multi-project delegation into crystalline workflows.
-              </p>
-            </div>
-            <div class="bento-pill-tags">
-              <span class="bento-tag">Leadership Flow</span>
-              <span class="bento-tag">Inbox Zero for ADHD</span>
-              <span class="bento-tag">Delegation Mastery</span>
-            </div>
-          </div>
-
-          <!-- Bento 5 (Span 6) -->
-          <div class="bento-card bento-span-6">
-            <div>
-              <div class="bento-icon-wrapper">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-              </div>
-              <h3 class="bento-title">Sensory &amp; Environmental Design</h3>
-              <p class="bento-desc">
-                Audit your physical and digital workspaces. Minimize visual clutter, sensory overload, context switching, and notification noise to induce effortless deep work states.
-              </p>
-            </div>
-            <div class="bento-pill-tags">
-              <span class="bento-tag">Deep Work Spaces</span>
-              <span class="bento-tag">Sensory Optimization</span>
-            </div>
-          </div>
-
-          <!-- Bento 6 (Span 6) -->
-          <div class="bento-card bento-span-6">
-            <div>
-              <div class="bento-icon-wrapper">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
-              </div>
-              <h3 class="bento-title">Unmasking &amp; Radical Self-Trust</h3>
-              <p class="bento-desc">
-                Step away from exhausting neurotypical masking and lifelong shame. Reframe ADHD as an extraordinary asset when properly channeled, restoring genuine confidence.
-              </p>
-            </div>
-            <div class="bento-pill-tags">
-              <span class="bento-tag">Neurodiversity Pride</span>
-              <span class="bento-tag">Self-Compassion</span>
-            </div>
-          </div>
-
-        </div>
-
       </div>
     </section>
 
-    <!-- ======================================================================
-         6. INTERACTIVE ADHD CLARITY QUIZ (SELF-ASSESSMENT)
-         ====================================================================== -->
-    <section class="quiz-section" id="quiz">
-      <div class="container">
-        
-        <div class="section-header">
-          <p class="section-eyebrow">Interactive Diagnostic</p>
-          <h2 class="section-title">Is ADHD Coaching right for you?</h2>
-          <p class="section-desc">
-            Take this 60-second interactive check to evaluate your executive function profile and receive customized coaching recommendations.
-          </p>
-        </div>
-
-        <div class="quiz-container">
-          <!-- Progress Bar -->
-          <div class="quiz-progress-bar">
-            <div class="quiz-progress-fill" id="quizProgressFill"></div>
-          </div>
-
-          <!-- Step 1 -->
-          <div class="quiz-step active" id="quizStep1">
-            <div class="quiz-question-num">Question 1 of 4 • Task Initiation</div>
-            <h3 class="quiz-question-text">When you sit down to begin an important project or administrative task, what typically happens?</h3>
-            <div class="quiz-options">
-              <button class="quiz-option-btn" onclick="selectQuizOption(1, 3, 'Paralysis & Overwhelm')">
-                <span>I freeze, get overwhelmed by where to start, and find myself scrolling or doing trivial tasks instead.</span>
-                <span class="quiz-arrow">&rsaquo;</span>
-              </button>
-              <button class="quiz-option-btn" onclick="selectQuizOption(1, 2, 'Burst & Burnout')">
-                <span>I only start when a panic-inducing deadline is hours away, working in an exhausting adrenaline rush.</span>
-                <span class="quiz-arrow">&rsaquo;</span>
-              </button>
-              <button class="quiz-option-btn" onclick="selectQuizOption(1, 1, 'Inconsistent Flow')">
-                <span>Some days I hyperfocus effortlessly; other days I cannot bring myself to write a single email.</span>
-                <span class="quiz-arrow">&rsaquo;</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="quiz-step" id="quizStep2">
-            <div class="quiz-question-num">Question 2 of 4 • Time Perception</div>
-            <h3 class="quiz-question-text">How does "time blindness" show up in your daily work and personal routine?</h3>
-            <div class="quiz-options">
-              <button class="quiz-option-btn" onclick="selectQuizOption(2, 3, 'Severe Time Blindness')">
-                <span>Time feels binary: either "NOW" or "NOT NOW." I constantly underestimate how long tasks take.</span>
-                <span class="quiz-arrow">&rsaquo;</span>
-              </button>
-              <button class="quiz-option-btn" onclick="selectQuizOption(2, 2, 'Hyperfocus Time Loss')">
-                <span>I lose 5 hours without eating or drinking, then scramble to catch up on missed meetings.</span>
-                <span class="quiz-arrow">&rsaquo;</span>
-              </button>
-              <button class="quiz-option-btn" onclick="selectQuizOption(2, 1, 'Calendar Clutter')">
-                <span>I have 10 calendars and planner apps, but abandon every single one within 2 weeks.</span>
-                <span class="quiz-arrow">&rsaquo;</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="quiz-step" id="quizStep3">
-            <div class="quiz-question-num">Question 3 of 4 • Emotional Impact</div>
-            <h3 class="quiz-question-text">How often do you feel burdened by guilt, imposter feelings, or fear of criticism?</h3>
-            <div class="quiz-options">
-              <button class="quiz-option-btn" onclick="selectQuizOption(3, 3, 'Frequent RSD / Guilt')">
-                <span>Frequently. A slight critical email or perceived rejection can derail my entire productive day.</span>
-                <span class="quiz-arrow">&rsaquo;</span>
-              </button>
-              <button class="quiz-option-btn" onclick="selectQuizOption(3, 2, 'Secret Exhaustion')">
-                <span>I mask very well on the outside, but feel secretly exhausted and terrified of falling behind.</span>
-                <span class="quiz-arrow">&rsaquo;</span>
-              </button>
-              <button class="quiz-option-btn" onclick="selectQuizOption(3, 1, 'Moderate Frustration')">
-                <span>Occasionally. I know I have immense talent, but my execution fails to reflect my true capabilities.</span>
-                <span class="quiz-arrow">&rsaquo;</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Step 4 -->
-          <div class="quiz-step" id="quizStep4">
-            <div class="quiz-question-num">Question 4 of 4 • Your Primary Goal</div>
-            <h3 class="quiz-question-text">What would create the single highest breakthrough in your life right now?</h3>
-            <div class="quiz-options">
-              <button class="quiz-option-btn" onclick="selectQuizOption(4, 3, 'Executive Systems')">
-                <span>Building sustainable, low-friction daily systems that actually stick without burnout.</span>
-                <span class="quiz-arrow">&rsaquo;</span>
-              </button>
-              <button class="quiz-option-btn" onclick="selectQuizOption(4, 2, 'Career Acceleration')">
-                <span>Mastering focus, delegation, and executive performance in my career or business in Abu Dhabi / UAE.</span>
-                <span class="quiz-arrow">&rsaquo;</span>
-              </button>
-              <button class="quiz-option-btn" onclick="selectQuizOption(4, 1, 'Clarity & Self-Trust')">
-                <span>Overcoming shame, understanding my brain wiring, and regaining peaceful control.</span>
-                <span class="quiz-arrow">&rsaquo;</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Step Results -->
-          <div class="quiz-step" id="quizStepResult">
-            <div class="quiz-result-box">
-              <div class="result-badge" id="resultBadge">High Match • Exceptional Potential</div>
-              <h3 class="result-title" id="resultTitle">You are an ideal candidate for ADHD Coaching.</h3>
-              <p class="result-desc" id="resultDesc">
-                Your answers reflect a high-capacity neurodivergent mind currently restricted by neurotypical executive systems. With custom dopamine architecture and weekly accountability, you can eliminate chronic friction.
-              </p>
-
-              <div class="result-breakdown">
-                <div class="result-stat-card">
-                  <div class="result-stat-label">Fit Score</div>
-                  <div class="result-stat-value" id="matchScore">96% Match</div>
-                </div>
-                <div class="result-stat-card">
-                  <div class="result-stat-label">Recommended Path</div>
-                  <div class="result-stat-value">12-Week Mastery</div>
-                </div>
-                <div class="result-stat-card">
-                  <div class="result-stat-label">Session Format</div>
-                  <div class="result-stat-value">Abu Dhabi / Online</div>
-                </div>
-              </div>
-
-              <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-                <button class="btn-primary" data-open-modal="booking" data-package="The 12-Week ADHD Mastery">
-                  Book Your Free Clarity Call
-                </button>
-                <button class="btn-secondary" onclick="restartQuiz()">
-                  Retake Check
-                </button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
+    <section class="reset section" aria-labelledby="resetTitle">
+      <div class="shell reset-card reveal">
+        <div class="reset-copy"><p class="eyebrow"><span></span> A pause, right here</p><h2 id="resetTitle">Take a 60-second reset.</h2><p>No fixing. No catching up. Just let the next breath be the only thing on your list.</p><div class="reset-actions"><button class="button" id="breathButton" type="button">Start breathing</button><button class="text-button" id="breathRestart" type="button" hidden>Restart</button></div></div>
+        <div class="breath-stage" aria-live="polite"><div class="breath-ring" id="breathRing"><span id="breathCount">60</span><small>seconds</small></div><p id="breathStatus">Ready when you are</p></div>
       </div>
     </section>
 
-    <!-- ======================================================================
-         7. ABOUT RIYA CHITNIS SECTION
-         ====================================================================== -->
-    <section class="about-section" id="about">
-      <div class="container">
-        
-        <div class="about-grid">
-          
-          <div class="about-image-container">
-            <div class="about-image-frame">
-              <img src="riyachitnis.JPG" alt="Riya Chitnis, ADHD Coach" loading="lazy">
-              <div class="about-location-badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-                Abu Dhabi, United Arab Emirates
-              </div>
-            </div>
-          </div>
-
-          <div class="about-text-content">
-            <div class="section-eyebrow" style="text-align: left; margin-bottom: 0;">Meet Your Coach</div>
-            <h2 class="section-title" style="text-align: left;">"I believe in coaching that meets you where your brain is."</h2>
-            
-            <p>
-              I'm <strong>Riya Chitnis</strong>, a dedicated ADHD and Executive Function Coach based in Abu Dhabi. Having worked closely with neurodivergent individuals ranging from corporate leaders and creative founders to university students, I know how heavy the weight of untreated executive dysfunction can feel.
-            </p>
-
-            <p>
-              My coaching is grounded in modern neuroscience, behavioral psychology, and radical empathy. We don't spend time judging past struggles; we design tailored, pragmatic, and dopamine-rewarding solutions so you can excel in your career, relationships, and daily well-being.
-            </p>
-
-            <div class="credentials-list">
-              <div class="credential-item">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span class="credential-text">Certified ADHD Life Coach</span>
-              </div>
-              <div class="credential-item">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span class="credential-text">Executive Function Specialist</span>
-              </div>
-              <div class="credential-item">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span class="credential-text">Abu Dhabi In-Person Consultations</span>
-              </div>
-              <div class="credential-item">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span class="credential-text">Global Virtual Coaching (GST/EST/GMT)</span>
-              </div>
-            </div>
-
-            <div style="margin-top: 14px;">
-              <button class="btn-primary" data-open-modal="booking">
-                Schedule a 20-Min Conversation with Riya
-              </button>
-            </div>
-
-          </div>
-
+    <section class="faq section" id="faq">
+      <div class="shell faq-grid">
+        <div class="faq-heading reveal"><p class="eyebrow"><span></span> Before we begin</p><h2>Useful things to know.</h2><p>If you are unsure whether coaching is the right kind of support, send me a message. The first conversation is free and there is no pressure to continue.</p></div>
+        <div class="faq-list reveal">
+          <details><summary>What is ADHD coaching?</summary><p>It is a collaborative, action-oriented process. We focus on present-day goals, patterns and practical experiments that can support planning, follow-through, routines and self-understanding.</p></details>
+          <details><summary>Do I need an ADHD diagnosis?</summary><p>No. Coaching does not assess or diagnose ADHD. You are welcome if attention, organization or follow-through is getting in the way and you want practical support.</p></details>
+          <details><summary>Is coaching the same as therapy or medical care?</summary><p>No. Coaching is not psychotherapy, counselling, diagnosis or medical treatment. I do not prescribe medication or treat mental health conditions. If your needs are clinical or urgent, I will encourage you to contact an appropriately licensed professional.</p></details>
+          <details><summary>Where do sessions happen?</summary><p>Online sessions are available worldwide. In-person sessions in Abu Dhabi can be arranged in a mutually agreed, appropriate setting.</p></details>
+          <details><summary>What happens in the free conversation?</summary><p>We spend 20 minutes discussing what feels difficult, what you would like to change and whether my approach is a useful fit. It is not a diagnosis and there is no obligation to book.</p></details>
+          <details><summary>Who is coaching not suitable for?</summary><p>Coaching is not crisis care and is not a replacement for clinical support. If you may harm yourself or someone else, contact local emergency services or a qualified crisis service immediately.</p></details>
         </div>
-
       </div>
     </section>
 
-    <!-- ======================================================================
-         8. PROGRAMS & INVESTMENT (APPLE PRODUCT TIERS)
-         ====================================================================== -->
-    <section class="programs-section" id="programs">
-      <div class="container">
-        
-        <div class="section-header">
-          <p class="section-eyebrow">Coaching Programs</p>
-          <h2 class="section-title">Designed for lasting cognitive transformation.</h2>
-          <p class="section-desc">
-            Transparent, goal-driven coaching tracks tailored to your pace and depth of need.
-          </p>
-        </div>
-
-        <!-- Currency Selector -->
-        <div class="currency-toggle-wrapper">
-          <span style="font-size: 0.85rem; color: var(--text-tertiary);">Currency:</span>
-          <div class="currency-toggle">
-            <button class="currency-btn active" id="btnAED">AED (UAE Dirhams)</button>
-            <button class="currency-btn" id="btnUSD">USD ($)</button>
-          </div>
-        </div>
-
-        <div class="programs-grid">
-          
-          <!-- Program 1 -->
-          <div class="program-card">
-            <div>
-              <h3 class="program-name">The Clarity Intensive</h3>
-              <p class="program-tagline">A single high-impact session to diagnose your bottlenecks and build an emergency executive reset.</p>
-              
-              <div class="program-price-box">
-                <div class="price-amount" id="priceSingle">AED 950</div>
-                <div class="price-sub">90-Minute Deep Dive + Action Roadmap</div>
-              </div>
-
-              <ul class="program-features">
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Comprehensive Executive Function Audit</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Immediate Dopamine Trigger Mapping</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Customized Notion / Task Architecture Blueprint</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>7-Day Post-Session Check-in via WhatsApp</span>
-                </li>
-              </ul>
-            </div>
-
-            <button class="btn-secondary" style="width: 100%;" data-open-modal="booking" data-package="The Clarity Intensive">
-              Get Started
-            </button>
-          </div>
-
-          <!-- Program 2 (Featured) -->
-          <div class="program-card featured">
-            <span class="popular-badge">Most Popular</span>
-            <div>
-              <h3 class="program-name">12-Week ADHD Mastery</h3>
-              <p class="program-tagline">Our signature transformation journey to systematically rewire your habits, focus, and lifestyle.</p>
-              
-              <div class="program-price-box">
-                <div class="price-amount" id="priceTwelve">AED 9,800</div>
-                <div class="price-sub">12 Weekly 1:1 Sessions + Unlimited Async Support</div>
-              </div>
-
-              <ul class="program-features">
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span><strong>12 Private 1-on-1 Sessions</strong> (In-person or Zoom)</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Continuous Mid-Week WhatsApp Accountability</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Custom Workspace &amp; Digital Tooling Setup</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>RSD &amp; Emotional Regulation Somatic Protocols</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Lifelong Self-Coaching Toolkit &amp; Revisit Framework</span>
-                </li>
-              </ul>
-            </div>
-
-            <button class="btn-primary" style="width: 100%;" data-open-modal="booking" data-package="The 12-Week ADHD Mastery">
-              Apply for 12-Week Mastery
-            </button>
-          </div>
-
-          <!-- Program 3 -->
-          <div class="program-card">
-            <div>
-              <h3 class="program-name">Executive &amp; Founder Sprint</h3>
-              <p class="program-tagline">High-touch coaching for C-suite leaders, founders, and high-output professionals in Abu Dhabi &amp; Dubai.</p>
-              
-              <div class="program-price-box">
-                <div class="price-amount" id="priceExec">AED 16,500</div>
-                <div class="price-sub">6 Months Comprehensive Leadership Partnership</div>
-              </div>
-
-              <ul class="program-features">
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Bi-weekly Strategic In-Person / Video Sessions</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>High-Priority Direct Voice Note Access</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Executive Delegation &amp; Meeting Optimization</span>
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Burnout Prevention &amp; Energy Architecture</span>
-                </li>
-              </ul>
-            </div>
-
-            <button class="btn-secondary" style="width: 100%;" data-open-modal="booking" data-package="Executive & Founder Sprint">
-              Inquire for Executive Sprint
-            </button>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         9. INTERACTIVE FOCUS & GROUNDING TOOL (APPLE MINDFULNESS STYLE)
-         ====================================================================== -->
-    <section class="focus-tool-section">
-      <div class="container">
-        
-        <div class="focus-tool-card">
-          <div class="section-eyebrow" style="margin-bottom: 8px;">Micro-Tool</div>
-          <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">
-            ADHD 60-Second Dopamine Reset
-          </h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary);">
-            Feeling overstimulated or unfocused right now? Synchronize your breath with this visual pacer to reset your nervous system.
-          </p>
-
-          <div class="breathing-circle-container">
-            <div class="breathing-circle-pulse"></div>
-            <div class="breathing-status-text" id="breathingStatus">Inhale deeply...</div>
-          </div>
-
-          <div>
-            <button class="btn-secondary" id="breathingToggleBtn" style="font-size: 0.9rem; padding: 8px 18px;">
-              Pause Reset
-            </button>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         10. CLIENT TESTIMONIALS (REAL VOICES)
-         ====================================================================== -->
-    <section class="testimonials-section">
-      <div class="container">
-        
-        <div class="section-header">
-          <p class="section-eyebrow">Client Transformations</p>
-          <h2 class="section-title">Proof that the right system changes everything.</h2>
-        </div>
-
-        <div class="testimonials-grid">
-          
-          <div class="testimonial-card">
-            <div>
-              <div class="testimonial-stars">★★★★★</div>
-              <p class="testimonial-quote">
-                "Before working with Riya, I felt like a fraud at my investment firm on Al Maryah Island. I was smart but constantly terrified of missing critical deadlines. Riya didn’t give me generic advice; she built systems around my exact brain quirks. My productivity is up 3x and my anxiety is virtually gone."
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <div class="author-avatar">TA</div>
-              <div class="author-info">
-                <h4>Tariq A.</h4>
-                <p>Director of Strategy, Abu Dhabi</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div>
-              <div class="testimonial-stars">★★★★★</div>
-              <p class="testimonial-quote">
-                "Riya Chitnis has an exceptional ability to cut through the noise. She helped me understand that my ADHD is an incredible creative superpower when anchored by the right friction-free rituals. Her sessions in Abu Dhabi were the best investment I’ve made in my career."
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <div class="author-avatar">SM</div>
-              <div class="author-info">
-                <h4>Sara M.</h4>
-                <p>Creative Director &amp; Agency Founder</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div>
-              <div class="testimonial-stars">★★★★★</div>
-              <p class="testimonial-quote">
-                "I was diagnosed with ADHD in my late 20s and had no idea how to navigate my master's thesis. Riya’s body doubling techniques and time-anchoring blueprints transformed how I study. I submitted with distinction."
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <div class="author-avatar">KL</div>
-              <div class="author-info">
-                <h4>Kavya L.</h4>
-                <p>Postgraduate Researcher, Dubai</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         11. ABU DHABI & HYBRID HUB SECTION
-         ====================================================================== -->
-    <section class="location-section" id="location">
-      <div class="container">
-        
-        <div class="location-card">
-          <div>
-            <div class="section-eyebrow" style="text-align: left;">Location &amp; Access</div>
-            <h2 style="font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">
-              Based in Abu Dhabi.<br>Serving clients worldwide.
-            </h2>
-            <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6;">
-              Whether you prefer quiet face-to-face sessions in Abu Dhabi or the ease of high-definition video calls from anywhere across the globe, you receive the same attentive, high-touch coaching partnership.
-            </p>
-
-            <div class="location-features">
-              <div class="location-feat-item">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                <span><strong>In-Person Consultations:</strong> Abu Dhabi (Al Maryah, Saadiyat, Downtown) &amp; Select Dubai Studios</span>
-              </div>
-              <div class="location-feat-item">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
-                <span><strong>Virtual Global Coaching:</strong> High-bandwidth Zoom / Google Meet across all time zones</span>
-              </div>
-              <div class="location-feat-item">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                <span><strong>WhatsApp Concierge:</strong> Mid-week asynchronous support &amp; accountability check-ins</span>
-              </div>
-            </div>
-
-            <button class="btn-primary" data-open-modal="booking">
-              Book Abu Dhabi / Virtual Session
-            </button>
-          </div>
-
-          <div class="location-map-mock">
-            <div class="map-badge-city">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
-              <span>Abu Dhabi, UAE Hub</span>
-            </div>
-            <p style="font-size: 0.85rem; color: var(--text-tertiary); margin-bottom: 20px;">
-              Primary client zones &amp; meeting spaces:
-            </p>
-            <div class="uae-locations-pills">
-              <span class="uae-pill">Al Maryah Island</span>
-              <span class="uae-pill">Saadiyat Island</span>
-              <span class="uae-pill">Corniche / Downtown</span>
-              <span class="uae-pill">Yas Island</span>
-              <span class="uae-pill">Dubai Marina / DIFC</span>
-              <span class="uae-pill">International Video</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         12. FREQUENTLY ASKED QUESTIONS (APPLE ACCORDION)
-         ====================================================================== -->
-    <section class="faq-section" id="faq">
-      <div class="container">
-        
-        <div class="section-header">
-          <p class="section-eyebrow">Answers &amp; Clarity</p>
-          <h2 class="section-title">Frequently Asked Questions</h2>
-        </div>
-
-        <div class="faq-list">
-          
-          <div class="faq-item active">
-            <button class="faq-question">
-              <span>What is the difference between ADHD Coaching and Therapy?</span>
-              <span class="faq-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </span>
-            </button>
-            <div class="faq-answer">
-              Therapy often focuses on processing past emotional trauma, psychological healing, and clinical diagnosis. ADHD Coaching is forward-looking, pragmatic, and action-oriented. We focus on how your executive functioning affects your present days—building systems, overcoming procrastination, optimizing your work environment, and executing your goals in real time.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Do I need an official ADHD diagnosis to work with Riya?</span>
-              <span class="faq-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </span>
-            </button>
-            <div class="faq-answer">
-              No formal medical diagnosis is required. Many high-achieving adults have undiagnosed ADHD traits, executive function bottlenecks, or attention regulation challenges. If you struggle with time blindness, task paralysis, dopamine fatigue, or disorganization, our neuroscience-backed coaching tools will provide immediate value.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Where do in-person coaching sessions take place in Abu Dhabi?</span>
-              <span class="faq-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </span>
-            </button>
-            <div class="faq-answer">
-              In-person sessions in Abu Dhabi take place in quiet, curated, sensory-friendly meeting spaces across Al Maryah Island, Saadiyat, and central Abu Dhabi business hubs. Arrangements can also be made for sessions in Dubai or at corporate client offices upon request.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>What happens during our free 20-minute Clarity Call?</span>
-              <span class="faq-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </span>
-            </button>
-            <div class="faq-answer">
-              The Clarity Call is a zero-pressure conversation where we explore your primary obstacles, discuss how your brain processes tasks, and determine if 1:1 coaching is the right fit. You'll leave with immediate insights regardless of whether you choose to enroll in a program.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Can I pay in instalments or via corporate development budgets?</span>
-              <span class="faq-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </span>
-            </button>
-            <div class="faq-answer">
-              Yes. We offer flexible payment plans for the 12-Week and Executive programs. Furthermore, many UAE and international employers sponsor ADHD and Executive Function coaching under their Professional Development or Wellness allowances. Invoices and receipts are provided accordingly.
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         13. FINAL KEYNOTE CALL TO ACTION
-         ====================================================================== -->
-    <section class="final-cta-section" id="booking">
-      <div class="container">
-        
-        <div class="final-cta-box">
-          <div class="badge-eyebrow">Start Your Transformation</div>
-          <h2 class="final-cta-title">Ready to master your attention?</h2>
-          <p class="final-cta-desc">
-            Book your complimentary 20-minute discovery consultation with Riya Chitnis today. Available in-person in Abu Dhabi or online worldwide.
-          </p>
-          <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <button class="btn-primary" data-open-modal="booking" data-package="The 12-Week ADHD Mastery">
-              Book Free Clarity Call &rsaquo;
-            </button>
-            <a href="https://wa.me/971500000000?text=Hi%20Riya,%20I%20would%20like%20to%20learn%20more%20about%20your%20ADHD%20coaching%20in%20Abu%20Dhabi." class="whatsapp-direct-link" target="_blank" rel="noopener">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-              Chat Directly on WhatsApp
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </section>
+    <section class="final-cta section"><div class="shell final-card reveal"><div><p class="eyebrow"><span></span> One small next step</p><h2>You do not have to figure it all out before you message me.</h2></div><div><p>Tell me what has been feeling difficult. We can start there.</p><a class="button button-light" data-whatsapp="fit" href="https://wa.me/971502278067">Chat with Riya on WhatsApp <span aria-hidden="true">↗</span></a></div></div></section>
   </main>
 
-  <!-- ========================================================================
-       14. FOOTER (APPLE MINIMALIST DIRECTORY)
-       ======================================================================== -->
   <footer class="site-footer">
-    <div class="container">
-      
-      <div class="footer-disclaimer">
-        <p>
-          <strong>Professional Disclaimer:</strong> ADHD Coaching is a non-clinical, behavioral, and educational methodology designed to enhance executive functioning, time management, and life performance. Coaching services provided by Riya Chitnis do not constitute medical advice, psychological psychotherapy, or psychiatric diagnosis. Clients seeking medication or formal medical diagnosis are encouraged to consult a licensed medical professional or clinical psychiatrist.
-        </p>
-      </div>
-
-      <div class="footer-grid">
-        
-        <div class="footer-col">
-          <h4>Riya Chitnis ADHD Coaching</h4>
-          <p style="line-height: 1.6; margin-top: 8px;">
-            Empowering neurodivergent individuals across Abu Dhabi, Dubai, the wider UAE, and globally with compassionate, science-backed executive function architecture.
-          </p>
-        </div>
-
-        <div class="footer-col">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="#about">About Riya</a></li>
-            <li><a href="#philosophy">Our Approach</a></li>
-            <li><a href="#pillars">Coaching Pillars</a></li>
-            <li><a href="#quiz">ADHD Self-Check</a></li>
-            <li><a href="#programs">Programs &amp; Rates</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Locations &amp; Hubs</h4>
-          <ul>
-            <li><a href="#location">Abu Dhabi Studio</a></li>
-            <li><a href="#location">Al Maryah Island</a></li>
-            <li><a href="#location">Saadiyat Island</a></li>
-            <li><a href="#location">Dubai Marina Consults</a></li>
-            <li><a href="#location">Global Virtual (Zoom)</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Contact &amp; Connect</h4>
-          <ul>
-            <li><a href="mailto:riya.chitnis.adhd@gmail.com">riya.chitnis.adhd@gmail.com</a></li>
-            <li><a href="https://wa.me/971500000000" target="_blank" rel="noopener">WhatsApp Concierge</a></li>
-            <li><a href="#booking" onclick="openBookingModal(); return false;">Book Discovery Call</a></li>
-          </ul>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-        <div>
-          &copy; 2026 Riya Chitnis ADHD Coaching. All rights reserved. Abu Dhabi, United Arab Emirates.
-        </div>
-        <div style="display: flex; gap: 20px;">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Coaching</a>
-          <a href="#">Ethics Code</a>
-        </div>
-      </div>
-
+    <div class="shell footer-main">
+      <div><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">CD</span><span class="brand-copy"><strong>Clearer Days</strong><small>ADHD coaching with Riya</small></span></a><p>Practical, compassionate support for busy brains.</p></div>
+      <div><h2>Explore</h2><a href="#support">How I help</a><a href="#work-with-me">Work with me</a><a href="#about">About Riya</a><a href="#faq">FAQ</a></div>
+      <div><h2>Availability</h2><p>Online worldwide<br>Abu Dhabi by arrangement<br>Adults 18+</p></div>
+      <div><h2>Start here</h2><a data-whatsapp="fit" href="https://wa.me/971502278067">WhatsApp Riya ↗</a><p class="footer-phone">+971 50 227 8067</p></div>
     </div>
+    <div class="shell footer-legal"><p>ADHD coaching is non-clinical and does not provide diagnosis, therapy, counselling or medical treatment.</p><p>© <span id="year">2026</span> Clearer Days by Riya Chitnis</p></div>
   </footer>
-
-  <!-- ========================================================================
-       15. CONSULTATION BOOKING MODAL
-       ======================================================================== -->
-  <div class="modal-overlay" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-content">
-      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
-      
-      <div class="badge-eyebrow" style="margin-bottom: 8px;">Discovery Consultation</div>
-      <h3 class="modal-title" id="modalTitle">Book Your Free Clarity Call</h3>
-      <p class="modal-desc">
-        Schedule a 20-minute 1:1 conversation with Riya Chitnis to discuss your goals, executive function challenges, and ideal coaching program.
-      </p>
-
-      <form id="bookingForm">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="bookingName">Your Name *</label>
-            <input type="text" id="bookingName" class="form-control" placeholder="e.g. Sarah Al Hashimi" required>
-          </div>
-          <div class="form-group">
-            <label for="bookingEmail">Email Address *</label>
-            <input type="email" id="bookingEmail" class="form-control" placeholder="sarah@example.com" required>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="bookingLocation">Preferred Format *</label>
-            <select id="bookingLocation" class="form-control" required>
-              <option value="Abu Dhabi (In-Person)">Abu Dhabi (In-Person Studio)</option>
-              <option value="Dubai (In-Person)">Dubai (In-Person Consult)</option>
-              <option value="Virtual Video (Zoom/Meet)" selected>Virtual Video (Zoom / Google Meet)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="modalProgramSelect">Interested Track</label>
-            <select id="modalProgramSelect" class="form-control">
-              <option value="The 12-Week ADHD Mastery">12-Week ADHD Mastery (Signature)</option>
-              <option value="The Clarity Intensive">The Clarity Intensive (90 Min)</option>
-              <option value="Executive & Founder Sprint">Executive &amp; Founder Sprint</option>
-              <option value="Not Sure - Help Me Decide">Not Sure - Help Me Decide</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="bookingNotes">What is your primary ADHD / Executive Function challenge right now?</label>
-          <textarea id="bookingNotes" class="form-control" rows="3" placeholder="e.g. Procrastination on high-stakes projects, time blindness, emotional overwhelm at work..."></textarea>
-        </div>
-
-        <div class="form-actions">
-          <button type="submit" class="btn-primary" style="width: 100%;">
-            Confirm &amp; Request Clarity Call
-          </button>
-          
-          <a href="https://wa.me/971500000000?text=Hi%20Riya,%20I%20would%20like%20to%20schedule%20an%20ADHD%20consultation." class="whatsapp-direct-link" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-            Or Instant Message via WhatsApp
-          </a>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- Toast Notification -->
-  <div class="toast-msg" id="toastMsg">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#30d158" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-    <span id="toastText">Consultation request sent successfully!</span>
-  </div>
-
-  <!-- Main Javascript -->
   <script src="script.js"></script>
 </body>
 </html>
